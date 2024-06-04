@@ -1,38 +1,96 @@
+/* body {
+  background: linear-gradient(to bottom, black 30%, whitesmoke 32%);
+  color: whitesmoke;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  color: whitesmoke;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ColorFactory {
+  color: whitesmoke;
+  font-size: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.color-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ColorFactory-selection {
+  color: black;
+  background-color: whitesmoke;
+  font-size: 2rem;
+} */
+
+body {
+  background: linear-gradient(to bottom, black 30%, whitesmoke 32%);
+  color: whitesmoke;
+  height: 100vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative; /* Added position relative to the body */
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 4rem;
+  color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  text-align: center;
+}
+
+.ColorFactory {
+  color: whitesmoke;
+  font-size: 2rem;
+}
+
+.color-container {
+  position: relative; /* Removed position relative from color-container */
+}
+
+.ColorFactory-selection {
+  list-style: none;
+  color: black;
+  background-color: whitesmoke;
+  font-size: 2rem;
+  position: absolute; /* Added absolute positioning */
+  top: calc(20vh + 10px); /* Adjusted top position to move it below the black gradient */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}
+
+.ColorForm {
+  position: absolute;
+  top: calc(40vh + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  background-color: whitesmoke;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ColorForm .form-row {
+  display: flex;
+  align-items: center;
+}
+
+.ColorForm label, .ColorForm input {
+  margin: 5px;
 }
